@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 2.3 FORM </title>
+	<link rel="stylesheet" type="text/css" href="stlye.css">
+	<link rel="stylesheet" href="./codemirror/lib/codemirror.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./codemirror/addon/hint/show-hint.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./codemirror/addon/display/fullscreen.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./codemirror/theme/yonce.css">
+	
+	<script src="./codemirror/lib/codemirror.js"></script>
+	<script src="./codemirror/mode/xml/xml.js"></script>
+	<script src="./codemirror/mode/javascript/javascript.js"></script>
+	<script src="./codemirror/mode/css/css.js"></script>
+	<script src="./codemirror/mode/htmlmixed/htmlmixed.js"></script>
+	<script src="./codemirror/addon/edit/matchbrackets.js"></script>
+	<script src="./codemirror/addon/edit/matchtags.js"></script>
+	<script src="./codemirror/addon/edit/closebrackets.js"></script>
+	<script src="./codemirror/addon/edit/closetag.js"></script>
+	<script src="./codemirror/addon/fold/xml-fold.js"></script>
+	<script src="./codemirror/addon/hint/show-hint.js"></script>
+	<script src="./codemirror/addon/hint/css-hint.js"></script>
+	<script src="./codemirror/addon/hint/javascript-hint.js"></script>
+	<script src="./codemirror/addon/hint/html-hint.js"></script>
+	<script src="./codemirror/addon/hint/xml-hint.js"></script>
+	<script src="./codemirror/addon/hint/anyword-hint.js"></script>
+	<script src="./codemirror/addon/hint/sql-hint.js"></script>
+	<script src="./codemirror/addon/display/fullscreen.js"></script>
+	<script src="./codemirror/addon/selection/mark-selection.js"></script>
+
+
+</head>
+<body>
+<ul>
+  <li><a class="active" href="../../../../../../index.html">Home</a></li>
+  <li><a href="../../../../../QuizHome/index.html">ทดสอบ</a></li>
+</ul>
+
+
+<div class="grid-container">
+	<div class="item1"><center><b>ตัวอย่าง form Login จากเว็บ W3school !</b></center></div>
+	<div class="item3"> 
+		<div class="code-editor custom-box">
+		<center><b>พิมพ์โค้ดลงที่นี่เลย!</b></center>
+		<textarea name="code-area" class="code-area" id="code-area"><!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>form Login จากเว็บ W3school</h2>
+
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large">Login</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+  
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+        <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+      </div>
+
+      <form class="w3-container" action="/action_page.php">
+        <div class="w3-section">
+          <label><b>Username</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+          <label><b>Password</b></label>
+          <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+          <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+        <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+            
+</body>
+</html>
+
+</textarea>
+		<script>
+			var editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {
+    		mode: 'text/html',
+    		theme: 'yonce',
+    		matchBrackets: true,
+    		lineNumbers: true,
+    		autoCloseTags: true,
+    		autoCloseBrackets: true,
+    		matchTags: {
+    		bothTags: true
+    		},
+    		extraKeys: {
+        	"Ctrl-J": "toMatchingTag"
+    		},
+    		lineWrapping: true,
+    		styleSelectedText: true,
+    		extraKeys: {
+        	"Ctrl-Space": "autocomplete",
+        	"Ctrl-F": function(cm) {
+            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+        	},
+        	"Esc": function(cm) {
+            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+        }
+    }
+});
+			editor.setSize("650","450");
+		</script>
+		</div>
+		
+	</div>
+	<div class="item4">
+		<div class="run-editor custom-box"> 
+		<b><center>การแสดงผล</b></center>
+		<iframe class="iframe-style" id="iframe"></iframe>
+		</div>
+ 	</div>
+
+	<div class="item5">
+	
+	<div class="next-question">
+				<button type="button" class="run-btn btn">แสดงผล</button>
+				<button type="button" class="go-home-btn btn">ออก</button>
+	</div>
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="main.js"></script>
+</html>
