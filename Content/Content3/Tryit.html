@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 1.3 HTML3 </title>
+	<link rel="stylesheet" type="text/css" href="stlye.css">
+	<link rel="stylesheet" href="./codemirror/lib/codemirror.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./codemirror/addon/hint/show-hint.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./codemirror/addon/display/fullscreen.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./codemirror/theme/yonce.css">
+	
+	<script src="./codemirror/lib/codemirror.js"></script>
+	<script src="./codemirror/mode/xml/xml.js"></script>
+	<script src="./codemirror/mode/javascript/javascript.js"></script>
+	<script src="./codemirror/mode/css/css.js"></script>
+	<script src="./codemirror/mode/htmlmixed/htmlmixed.js"></script>
+	<script src="./codemirror/addon/edit/matchbrackets.js"></script>
+	<script src="./codemirror/addon/edit/matchtags.js"></script>
+	<script src="./codemirror/addon/edit/closebrackets.js"></script>
+	<script src="./codemirror/addon/edit/closetag.js"></script>
+	<script src="./codemirror/addon/fold/xml-fold.js"></script>
+	<script src="./codemirror/addon/hint/show-hint.js"></script>
+	<script src="./codemirror/addon/hint/css-hint.js"></script>
+	<script src="./codemirror/addon/hint/javascript-hint.js"></script>
+	<script src="./codemirror/addon/hint/html-hint.js"></script>
+	<script src="./codemirror/addon/hint/xml-hint.js"></script>
+	<script src="./codemirror/addon/hint/anyword-hint.js"></script>
+	<script src="./codemirror/addon/hint/sql-hint.js"></script>
+	<script src="./codemirror/addon/display/fullscreen.js"></script>
+	<script src="./codemirror/addon/selection/mark-selection.js"></script>
+
+
+</head>
+<body>
+<ul>
+  <li><a class="active" href="../../index.html">Home</a></li>
+  <li><a href="../QuizHome/index.html">ทดสอบ</a></li>
+</ul>
+
+
+<div class="grid-container">
+	<div class="item1"><center><b> CSS Layout </b></center></div>
+	<div class="item3"> 
+		<div class="code-editor custom-box">
+		<center><b>พิมพ์โค้ดลงที่นี่เลย!</b></center>
+		<textarea name="code-area" class="code-area" id="code-area"><!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+</textarea>
+		<script>
+			var editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {
+    		mode: 'text/html',
+    		theme: 'yonce',
+    		matchBrackets: true,
+    		lineNumbers: true,
+    		autoCloseTags: true,
+    		autoCloseBrackets: true,
+    		matchTags: {
+    		bothTags: true
+    		},
+    		extraKeys: {
+        	"Ctrl-J": "toMatchingTag"
+    		},
+    		lineWrapping: true,
+    		styleSelectedText: true,
+    		extraKeys: {
+        	"Ctrl-Space": "autocomplete",
+        	"Ctrl-F": function(cm) {
+            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+        	},
+        	"Esc": function(cm) {
+            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+        }
+    }
+});
+			editor.setSize("650","450");
+		</script>
+		</div>
+		
+	</div>
+	<div class="item4">
+		<div class="run-editor custom-box"> 
+		<b><center>การแสดงผล</b></center>
+		<iframe class="iframe-style" id="iframe"></iframe>
+		</div>
+ 	</div>
+
+	<div class="item5">
+	
+	<div class="next-question">
+				<button type="button" class="run-btn btn">แสดงผล</button>
+				<button type="button" class="go-home-btn btn">ต่อไป</button>
+	</div>
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="main.js"></script>
+</html>
