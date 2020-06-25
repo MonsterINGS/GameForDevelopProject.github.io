@@ -25,5 +25,5 @@ goHomeBtn.addEventListener("click",()=>{
 
 function GoHome()
     {
-      window.location="../../Content.html";
+      window.location="Tryit_5/Tryit.html";
     }

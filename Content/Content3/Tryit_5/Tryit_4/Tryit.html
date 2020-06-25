@@ -33,29 +33,31 @@
 </head>
 <body>
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#contact">เนื้อหาหลักสูตร</a></li>
-  <li><a href="#about">เกี่ยวกับ</a></li>
+  <li><a class="active" href="../../../../index.html">Home</a></li>
+  <li><a href="../../../QuizHome/index.html">ทดสอบ</a></li>
 </ul>
 
 
 <div class="grid-container">
-	<div class="item1"><center><b>ลองแก้ไขโค้ดดูสิ!</b></center></div>
+	<div class="item1"><center><b>การเรียกใช้ JavaScript</b></center></div>
 	<div class="item3"> 
 		<div class="code-editor custom-box">
 		<center><b>พิมพ์โค้ดลงที่นี่เลย!</b></center>
 		<textarea name="code-area" class="code-area" id="code-area"><!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
 <body>
 
-<h1>การลิงค์ CSS ภายนอก</h1>
-<p>สามารถทดลองปรับตกแต่ง CSS ได้ที่ไฟล์ "mystyle.css".</p>
+<h1>การเรียกใช้ JavaScript</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
 
 </body>
-</html>
+</html> 
+
 </textarea>
 		<script>
 			var editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {

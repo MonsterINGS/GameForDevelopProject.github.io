@@ -25,5 +25,5 @@ runBtn.addEventListener("click",()=>{
 
 function GoHome()
     {
-      window.location="../../../../../Content.html";
+      window.location="../../../../../QuizHome/index.html";
     }

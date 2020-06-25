@@ -8,7 +8,7 @@ runBtn.addEventListener("click",()=>{
 
 function NextPage()
     {
-      window.location="Game1/index.html";
+      window.location="Tryit_1/Tryit.html";
     }
 
 
