@@ -49,8 +49,8 @@ myApp=[
 			question:"ข้อไหนคือคำสั่ง input type ในการให้ผู้ใช้เลือกแค่ตัวเลือกเดียว",
 			options:["input type = checkbox",
 			"input type = radio",
-			"input type = Radio ",
-			"input type = Checkbox "],
+			"input type = submit ",
+			"input type = action "],
 			answer:1,
 		},
 		{
@@ -82,9 +82,9 @@ myApp=[
 		{
 			question:"ข้อไหนคือ คำสั่งที่ใช้สร้างปุ่มใน Form",
 			options:["input type = checkbox",
-			"input type = button",
 			"input type = BUTTON",
-			"input type = Button"],
+			"input type = Label",
+			"input type = Textarea"],
 			answer:1,
 		},
 
