@@ -28,7 +28,7 @@ myApp=[
 		},
 		{
 			question:"ข้อไหนคือ คำสั่งที่ใช้เรียกเชื่อมต่อกับ CSS ภายนอก",
-			options:["Link","ul","link","script"],
+			options:["Li","ul","Link","script"],
 			answer:2,
 		},
 		{
@@ -54,11 +54,11 @@ myApp=[
 			answer:1,
 		},
 		{
-			question:"คำสั่งไหนคือคำสั่งที่ถูกของการใส่ชื่อ class",
-			options:["div class = name /div",
-			"div class name /div",
-			"div = name class /div",
-			"div class /div = name"],
+			question:"คำสั่งไหนคือคำสั่งที่ถูกของการใส่ชื่อใน class",
+			options:["class = 'name' ",
+			"class 'name' ",
+			" = 'name' class ",
+			" class name = "],
 			answer:0,
 		},
 		{
