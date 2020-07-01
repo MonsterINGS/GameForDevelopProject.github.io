@@ -39,25 +39,22 @@
 
 
 <div class="grid-container">
-	<div class="item1"><center><b>การเรียกใช้ JavaScript</b></center></div>
+	<div class="item1"><center><b>การลิงค์ CSS ภายนอก</b></center></div>
 	<div class="item3"> 
 		<div class="code-editor custom-box">
 		<center><b>พิมพ์โค้ดลงที่นี่เลย!</b></center>
 		<textarea name="code-area" class="code-area" id="code-area"><!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
 <body>
 
-<h1>การเรียกใช้ JavaScript</h1>
-
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
+<h1>การลิงค์ CSS ภายนอก</h1>
+<p>สามารถทดลองปรับตกแต่ง CSS ได้ที่ไฟล์ "mystyle.css".</p>
 
 </body>
-</html> 
-
+</html>
 </textarea>
 		<script>
 			var editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {

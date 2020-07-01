@@ -39,7 +39,7 @@
 
 
 <div class="grid-container">
-	<div class="item1"><center><b>การเปลี่ยน Background</b></center></div>
+	<div class="item1"><center><b>CSS Margins</b></center></div>
 	<div class="item3"> 
 		<div class="code-editor custom-box">
 		<center><b>พิมพ์โค้ดลงที่นี่เลย!</b></center>
@@ -47,31 +47,27 @@
 <html>
 <head>
 <style>
-h1 {
-  background-color: green;
-}
-
 div {
-  background-color: lightblue;
+  border: 1px solid red;
+  margin-left: 100px;
 }
 
-p {
-  background-color: yellow;
+p.ex1 {
+  margin-left: inherit;
 }
 </style>
 </head>
 <body>
 
-<h1>CSS background-color example!</h1>
+<h2>Use of the inherit value</h2>
+<p>Let the left margin be inherited from the parent element:</p>
+
 <div>
-This is a text inside a div element.
-<p>This paragraph has its own background color.</p>
-We are still in the div element.
+<p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
 </div>
 
 </body>
-</html>
-</textarea>
+</html></textarea>
 		<script>
 			var editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {
     		mode: 'text/html',

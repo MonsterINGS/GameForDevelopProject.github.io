@@ -39,7 +39,7 @@
 
 
 <div class="grid-container">
-	<div class="item1"><center><b>CSS Margins</b></center></div>
+	<div class="item1"><center><b>CSS Padding</b></center></div>
 	<div class="item3"> 
 		<div class="code-editor custom-box">
 		<center><b>พิมพ์โค้ดลงที่นี่เลย!</b></center>
@@ -47,27 +47,33 @@
 <html>
 <head>
 <style>
-div {
-  border: 1px solid red;
-  margin-left: 100px;
+.city {
+  background-color: orange;
+  color: white;
+  margin: 20px;
+  padding: 20px;
 }
-
-p.ex1 {
-  margin-left: inherit;
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  padding: 70px;
+  border: 1px solid #4CAF50;
 }
 </style>
 </head>
 <body>
 
-<h2>Use of the inherit value</h2>
-<p>Let the left margin be inherited from the parent element:</p>
-
-<div>
-<p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
-</div>
+<div>This element has a padding of 70px.</div>
 
 </body>
-</html></textarea>
+</html>
+
+</textarea>
 		<script>
 			var editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {
     		mode: 'text/html',
