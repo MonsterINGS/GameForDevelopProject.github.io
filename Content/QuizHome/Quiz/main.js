@@ -23,7 +23,7 @@ let interval;
 myApp=[
 		{
 			question:"ข้อไหนคือ Snytax แรกสุดของ HTML",
-			options:["script","!DOCTYPE html","html"],
+			options:["script","!DOCTYPE html","http"],
 			answer:1,
 		},
 		{
@@ -87,6 +87,89 @@ myApp=[
 			"input type = Textarea"],
 			answer:1,
 		},
+		{
+			question:"ข้อไหนคือ คำสั่งกำหนดเริ่มสร้างตาราง",
+			options:["table",
+			"tr",
+			"caption",
+			"td"],
+			answer:0,
+		},
+		{
+			question:"ข้อไหนคือ Tag การสร้างรายการแบบมีลำดับ",
+			options:["iu",
+			"og",
+			"ul",
+			"ol"],
+			answer:3,
+		},
+		{
+			question:"ข้อใดไม่จัดว่าเป็นFormatting Elements",
+			options:["b",
+			"s",
+			"i",
+			"sub"],
+			answer:1,
+		},
+		{
+			question:"ข้อใดเป็นขนาดใหญ่ที่สุดของ Heading",
+			options:["h1",
+			"h7",
+			"h4",
+			"h6"],
+			answer:3,
+		},
+		{
+			question:"HTML ย่อมาจากคำว่าอะไร",
+			options:["hightech Markup Language",
+			"Home tool Markup Languagea",
+			"Hypertext Markup Language",
+			"Hyperlink and Text Markup Language"],
+			answer:2,
+		},
+		{
+			question:"ข้อไหนคือ โค้ดการเปลี่ยนสีพื้นหลังใน CSS",
+			options:["background-color",
+			"bg-color",
+			"color-background",
+			"background-c"],
+			answer:0,
+		},
+		{
+			question:"CSS ย่อมาจากคำว่าอะไร",
+			options:["Computer Style Sheets",
+			"Colorful Style Sheets",
+			"Creative Style Sheets",
+			"Cascading Style Sheets"],
+			answer:3,
+		},
+		{
+			question:"ข้อไหนคือ Tag การเรียกใช้ CSS บน HTML",
+			options:["Slide",
+			"Link",
+			"Style",
+			"Script"],
+			answer:2,
+		},
+		{
+			question:"ข้อไหนคือ Tag การสร้างรายการแบบไม่มีลำดับ",
+			options:["og",
+			"ol",
+			"ul",
+			"iu"],
+			answer:2,
+		},
+		{
+			question:"ข้อไหนคือ Tag การเรียกใช้ JavaScript",
+			options:["JavaScript",
+			"script",
+			"Link script='JavaScript'",
+			"JS"],
+			answer:1,
+		},
+
+
+
 
 	  ]
 	  console.log(myApp)
@@ -96,7 +179,7 @@ myApp=[
 	  	questionText.innerHTML=myApp[questionIndex].question;
 	  	createOptions();
 	  	scoreBoard();
-	  	currentQuestionNum.innerHTML=number + " / " + myApp.length;
+	  	currentQuestionNum.innerHTML=number + " / " + 10;
 	  	startQuizBtn.classList.remove("show");
 	  }
 	  function createOptions(){
@@ -162,7 +245,7 @@ myApp=[
 	  	showNextQuestionBtn();
 	  	stopTimer();
 
-	  	if (number == myApp.length) {
+	  	if (number == 10) {
 	  		quizOver();
 	  	}
 
@@ -179,7 +262,7 @@ myApp=[
 			showNextQuestionBtn();
 	  		stopTimer();
 
-	  		if (number == myApp.length) {
+	  		if (number == 10) {
 	  		quizOver();
 	  		}
 		}
@@ -245,11 +328,11 @@ myApp=[
 	  }
 
 	  function quizResult(){
-	  	document.querySelector(".total-questions").innerHTML=myApp.length;
+	  	document.querySelector(".total-questions").innerHTML=10;
 	  	document.querySelector(".total-attemp").innerHTML=attemp;
 	  	document.querySelector(".total-correct").innerHTML=score;
 	  	document.querySelector(".total-wrong").innerHTML=attemp-score;
-	  	const percentage = (score/myApp.length)*100;
+	  	const percentage = (score/10)*100;
 	  	document.querySelector(".percentage").innerHTML=percentage.toFixed(2)+ "%";
 	  	goHomeBtn.classList.add("show");
 	  }
