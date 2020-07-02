@@ -85,7 +85,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  width: auto;
+  width: all;
 }
 
 li {
@@ -175,6 +175,12 @@ img {
   width: auto;
   height: 100%;
 }
+  
+  ul{
+  overflow: hidden;
+  min-width:1200px;
+  width: auto;
+  }
 
 }
 
@@ -186,15 +192,44 @@ img {
   max-height:400px;
   width: auto;
   height: 100%;
+  }
+
+  ul{
+  overflow: hidden;
+  min-width:1024px;
+  width: auto;
+  }
 
 }
 
 @media only screen and (max-width: 700px){
 
-    img {
+  img {
   position: static;
-  max-width:934px ;
+  max-width:700px ;
   width: auto;
   height: 100%;
+  }
 
+    ul{
+  overflow: hidden;
+  min-width:700px;
+  width: auto;
+  }
+}
+
+@media only screen and (max-width: 200px){
+
+  img {
+  position: static;
+  max-width:150px ;
+  width: auto;
+  height: 100%;
+  }
+
+    ul{
+  overflow: hidden;
+  min-width:400px;
+  width: auto;
+  }
 }

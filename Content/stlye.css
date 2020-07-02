@@ -99,11 +99,13 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  width: auto;
+  overflow: hidden;
+  width: all;
 }
 
 li {
   float: left;
+  line-height: 50px;
 }
 
 li a {
@@ -126,7 +128,7 @@ li a:hover:not(.active) {
 
 
 img {
-  max-width:1170px ;
+  max-width:1170px;
   max-height:501px;
   width: auto;
   height: auto;
@@ -186,8 +188,8 @@ img {
 body{
   margin: 0;
   font-family: 'Kanit', sans-serif;
-  width: 100% !important;
-  height: 100% !important;
+  width: auto;
+  height: auto;
   text-align: center;
 }
 *{
@@ -239,9 +241,15 @@ body{
   max-width:934px ;
   max-height:400px;
   width: auto;
-  height: 100%;
-
+  height: auto;
 }
+
+ul{
+  overflow: hidden;
+  width:1200px;
+}
+
+
 
 }
 
@@ -250,12 +258,9 @@ body{
 body{
   margin: 0;
   font-family: 'Kanit', sans-serif;
-  max-width:1024px ;
   width: auto;
   height: auto;
   text-align: center;
-  position: absolute;
-
 }
 *{
   box-sizing: border-box;
@@ -271,7 +276,7 @@ body{
     'footer footer footer footer footer footer';
   grid-gap: 10px;
   padding: 10px;
-  max-width:1024px ;
+  max-width:1024px;
   width: auto;
   height: 100%;
 }
@@ -281,7 +286,7 @@ body{
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-  max-width:1024px ;
+  max-width:1024px;
   width: auto;
   height: 100%;
 }
@@ -309,6 +314,11 @@ body{
 
 }
 
+  ul{
+  overflow: hidden;
+  width:1024px;
+  }
+
 }
 
 @media only screen and (max-width: 700px){
@@ -316,11 +326,9 @@ body{
 body{
   margin: 0;
   font-family: 'Kanit', sans-serif;
-  width: 100% !important;
-  height: 100% !important;
+  width: auto;
+  height: auto;
   text-align: center;
-  position: absolute;
-
 }
 *{
   box-sizing: border-box;
@@ -348,7 +356,7 @@ body{
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-  max-width:934px ;
+  max-width:704px ;
   width: auto;
   height: 100%;
 }
@@ -369,10 +377,16 @@ body{
 
   img {
   position: static;
-  max-width:934px ;
+  max-width:680px;
   width: auto;
-  height: 100%;
-
+  height: auto;
 }
+
+  ul{
+  overflow: hidden;
+  min-width:700px;
+  width: auto;
+  }
+
 
 }

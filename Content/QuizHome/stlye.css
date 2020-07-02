@@ -176,6 +176,12 @@ img {
   height: 100%;
 }
 
+  ul{
+  overflow: hidden;
+  min-width:1200px;
+  width: auto;
+  }
+
 }
 
 @media only screen and (max-width: 1024px){
@@ -189,12 +195,44 @@ img {
 
 }
 
+  ul{
+  overflow: hidden;
+  min-width:1024px;
+  width: auto;
+  }
+
+}
+
 @media only screen and (max-width: 700px){
 
     img {
   position: static;
-  max-width:934px ;
+  max-width:700px ;
+  max-height:200px;
   width: auto;
   height: 100%;
+}
+
+  ul{
+  overflow: hidden;
+  min-width:800px;
+  width: auto;
+  }
+
+@media only screen and (max-width: 200px){
+
+    img {
+  position: static;
+  max-width:200px ;
+  max-height:100px;
+  width: auto;
+  height: 100%;
+}
+
+  ul{
+  overflow: hidden;
+  min-width:300px;
+  width: auto;
+  }
 
 }
