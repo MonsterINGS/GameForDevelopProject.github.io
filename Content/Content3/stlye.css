@@ -6,9 +6,11 @@
 .item5 { grid-area: footer; }
 
 
-body{
+html, body{
   margin: 0;
   font-family: 'Kanit', sans-serif;
+  width: 100%;
+  height: 100%;
 }
 *{
   box-sizing: border-box;
@@ -17,7 +19,6 @@ body{
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
   grid-template-areas:
     'header header header header header header'
     'main right right right right right'
@@ -122,6 +123,16 @@ img {
 
 
 @media only screen and (max-width: 600px){
+
+  html, body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+}
+
   .grid-container{
     grid-template-areas:
     'header'
@@ -145,10 +156,27 @@ img {
 }
 
 @media only screen and (max-width: 620px) and (orientation: landscape){
+html, body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+}
 
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 1024px){
+html, body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+}
+
   .grid-container{
     grid-template-areas:
     'header'
@@ -166,6 +194,14 @@ img {
 
 }
 
-@media only screen and (max-width: 720px) and (orientation: landscape){
-\
+@media only screen and (max-width: 1024px) and (orientation: landscape){
+html, body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+}
+
 }
