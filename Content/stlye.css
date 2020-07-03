@@ -377,10 +377,11 @@ body{
 
   img {
   position: static;
-  max-width:680px;
+  max-width:680px ;
+  max-height:286px;
   width: auto;
-  height: auto;
-}
+  height: 100%;
+  }
 
   ul{
   overflow: hidden;
@@ -389,4 +390,21 @@ body{
   }
 
 
+}
+
+@media only screen and (max-width: 500px){
+
+  img {
+  position: static;
+  max-width:480px;
+  max-height: 202px;
+  width: auto;
+  height: 100%;
+  }
+
+    ul{
+  overflow: hidden;
+  min-width:400px;
+  width: auto;
+  }
 }
